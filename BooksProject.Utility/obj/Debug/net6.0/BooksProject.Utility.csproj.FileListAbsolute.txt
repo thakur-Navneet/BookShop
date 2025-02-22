@@ -1,0 +1,12 @@
+D:\Infotech\Final\BookShop\BooksProject.Utility\bin\Debug\net6.0\BooksProject.Utility.deps.json
+D:\Infotech\Final\BookShop\BooksProject.Utility\bin\Debug\net6.0\BooksProject.Utility.dll
+D:\Infotech\Final\BookShop\BooksProject.Utility\bin\Debug\net6.0\BooksProject.Utility.pdb
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.csproj.AssemblyReference.cache
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.AssemblyInfoInputs.cache
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.AssemblyInfo.cs
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.csproj.CoreCompileInputs.cache
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.dll
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\refint\BooksProject.Utility.dll
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\BooksProject.Utility.pdb
+D:\Infotech\Final\BookShop\BooksProject.Utility\obj\Debug\net6.0\ref\BooksProject.Utility.dll

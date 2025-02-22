@@ -1,0 +1,12 @@
+D:\Infotech\Final\BookShop\BooksProject.Models\bin\Debug\net6.0\BooksProject.Models.deps.json
+D:\Infotech\Final\BookShop\BooksProject.Models\bin\Debug\net6.0\BooksProject.Models.dll
+D:\Infotech\Final\BookShop\BooksProject.Models\bin\Debug\net6.0\BooksProject.Models.pdb
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.csproj.AssemblyReference.cache
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.AssemblyInfoInputs.cache
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.AssemblyInfo.cs
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.csproj.CoreCompileInputs.cache
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.dll
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\refint\BooksProject.Models.dll
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.pdb
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\ref\BooksProject.Models.dll
