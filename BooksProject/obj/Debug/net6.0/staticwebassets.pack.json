@@ -5,12 +5,52 @@
       "PackagePath": "staticwebassets\\BooksProject.bundle.scp.css"
     },
     {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\banner-6.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner-6.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\banner-7.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner-7.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\imageC1.png",
+      "PackagePath": "staticwebassets\\Images\\imageC1.png"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\imageC2.png",
+      "PackagePath": "staticwebassets\\Images\\imageC2.png"
+    },
+    {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Auhtor.js",
+      "PackagePath": "staticwebassets\\js\\Auhtor.js"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Category.js",
+      "PackagePath": "staticwebassets\\js\\Category.js"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Company.js",
+      "PackagePath": "staticwebassets\\js\\Company.js"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Covertype.js",
+      "PackagePath": "staticwebassets\\js\\Covertype.js"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Product.js"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\site.js",

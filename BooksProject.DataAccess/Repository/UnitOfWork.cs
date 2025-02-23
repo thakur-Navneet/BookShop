@@ -1,12 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BooksProject.DataAccess.Data;
+using BooksProject.DataAccess.Repository.IRepository;
+using BooksProject.Models;
 
 namespace BooksProject.DataAccess.Repository
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
+        private readonly ApplicationDbContext _context;
+        public UnitOfWork(ApplicationDbContext context)
+        {
+            _context = context; // Storing the provided context for use in the repositories.
+            Category = new CategoryRepository(_context);  // Initializing the Category repository.
+            Covertype = new CoverTypeRepository(_context); 
+            Company = new CompanyRepository(_context);
+        }
+
+        //public ICategoryRepository Category => throw new NotImplementedException();
+        public ICategoryRepository Category { get; private set; }
+        public ICovertypeRepository Covertype { get; private set; }
+        public ICompanyRepository Company { get; private set; }
+
+        public void Save()
+        {
+            _context.SaveChanges();  // Save all changes made to the database context
+        }
     }
 }
