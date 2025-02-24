@@ -1,4 +1,5 @@
-﻿using BooksProject.Models.ViewModels;
+﻿using BooksProject.DataAccess.Repository.IRepository;
+using BooksProject.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,15 +9,17 @@ namespace BooksProject.Areas.Customer.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUnitOfWork _unitOfWork;
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType,Author");
+            return View(productList);
         }
 
         public IActionResult Privacy()
