@@ -1,7 +1,9 @@
 ﻿using BooksProject.DataAccess.Repository.IRepository;
+using BooksProject.Models;
 using BooksProject.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Linq;
 
 namespace BooksProject.Areas.Customer.Controllers
 {
@@ -21,6 +23,7 @@ namespace BooksProject.Areas.Customer.Controllers
             var productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType,Author");
             return View(productList);
         }
+
 
         public IActionResult Privacy()
         {

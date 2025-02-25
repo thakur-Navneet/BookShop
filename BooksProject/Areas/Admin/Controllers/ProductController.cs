@@ -1,8 +1,11 @@
 ﻿using BooksProject.DataAccess.Repository.IRepository;
 using BooksProject.Models;
 using BooksProject.Models.ViewModels;
+using BooksProject.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data;
 
 namespace BooksProject.Areas.Admin.Controllers
 {
@@ -16,6 +19,12 @@ namespace BooksProject.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
+        public IActionResult AllDetails()
+        {
+            var productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType,Author");
+            return View(productList);
+        }
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
         public IActionResult Index()
         {
             return View();

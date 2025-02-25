@@ -7,6 +7,7 @@
         ICompanyRepository Company { get; }
         IAuthorRepository Author { get; }
         IProductRepository Product { get; }
+        IApplicationUserRepository ApplicationUser { get; }
         void Save();
     }
 }

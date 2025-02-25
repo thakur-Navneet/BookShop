@@ -1,10 +1,14 @@
 ﻿using BooksProject.DataAccess.Repository.IRepository;
 using BooksProject.Models;
+using BooksProject.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace BooksProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
     public class CovertypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
