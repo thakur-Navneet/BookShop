@@ -16,12 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Infotech\Final\BookShop\BooksProject
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Author/AllDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXEFsbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Author/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Author/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXFVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Blog/AllDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xBbGxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Blog/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Infotech/Final/BookShop/BooksProject/Areas/Admin/Views/Category/Index.cshtml]

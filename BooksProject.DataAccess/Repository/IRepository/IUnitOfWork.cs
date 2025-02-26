@@ -8,6 +8,7 @@
         IAuthorRepository Author { get; }
         IProductRepository Product { get; }
         IApplicationUserRepository ApplicationUser { get; }
+        IBlogRepository Blog { get; }
         void Save();
     }
 }

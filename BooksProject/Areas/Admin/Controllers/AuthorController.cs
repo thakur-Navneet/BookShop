@@ -9,7 +9,6 @@ using System.Data;
 namespace BooksProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
     public class AuthorController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -19,6 +18,12 @@ namespace BooksProject.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
+        public IActionResult AllDetails()
+        {
+            var authorList = _unitOfWork.Author.GetAll();
+            return View(authorList);
+        }
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
         public IActionResult Index()
         {
             return View();

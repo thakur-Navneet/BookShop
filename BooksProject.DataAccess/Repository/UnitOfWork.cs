@@ -16,6 +16,7 @@ namespace BooksProject.DataAccess.Repository
             Author = new AuthorRepository(_context);
             Product= new ProductRepository(_context);
             ApplicationUser = new ApplicationUserRepository(_context);
+            Blog = new BlogRepository(_context);
         }
 
         //public ICategoryRepository Category => throw new NotImplementedException();
@@ -25,6 +26,7 @@ namespace BooksProject.DataAccess.Repository
         public IAuthorRepository Author { get; private set; }
         public IProductRepository Product { get; private set; }
         public IApplicationUserRepository ApplicationUser { get; private set; }
+        public IBlogRepository Blog { get; private set; }
 
         public void Save()
         {

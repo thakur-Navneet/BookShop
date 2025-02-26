@@ -4,19 +4,20 @@
 <div class="container-fluid py-5" style="background-color: #fafafa;">
     <!-- Section Title -->
     <div class="container text-center mb-5">
-        <h2 class="section-title text-dark">Our Featured Products</h2>
+        <h2 class="section-title text-info">Our Featured Products</h2>
         <p class="lead text-muted section-description">Browse our carefully selected products. Get them before they are gone!</p>
     </div>
-
     <div class="container">
-        <div class="row">
+        <div class="input-group">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search products..." onkeyup="searchProducts()" />
+        </div>
+
+        <div class="row mt-5" id="productContainer">
             @foreach (var product in Model)
             {
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card border-0 shadow-sm rounded-lg product-card">
-                        <div class="category-label">
-                            @product.Category.Name
-                        </div>
+                <div class="col-lg-4 col-md-6 mb-4 product-card">
+                    <div class="card border-0 shadow-sm rounded-lg">
+                        <div class="category-label">@product.Category.Name</div>
                         <div id="productsliderinner" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -31,29 +32,50 @@
                             </div>
                         </div>
                         <div class="card-body p-4">
-                            <h5 class="card-title text-dark mb-3 font-weight-bold" style="min-height: 70px;">@product.Title</h5>
-                            <p class="card-text text-muted mb-3">by @product.Author.Title</p>
+                            <h5 class="card-title text-dark mb-3 font-weight-bold product-title">@product.Title</h5>
+                            <p class="card-text text-muted mb-3">by <span class="product-author">@product.Author.Title</span></p>
                             <p class="price">
                                 Price: &nbsp;
                                 <span class="text-muted"><strike>$@product.ListPrice.ToString("0.00")</strike></span> &nbsp;
-                                <span class="text-danger font-weight-bold h5"> $@product.Price100.ToString("0.00")</span>
+                                <span class="text-danger font-weight-bold h5">$@product.Price100.ToString("0.00")</span>
                             </p>
                         </div>
                         <div class="card-footer mt-3 p-3">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a asp-action="Details" class="btn btn-outline-dark form-control" asp-route-id="@product.Id">Details</a>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-primary mt-1 form-control" onclick="addToCart('@product.Title')">Add to Cart</button>
-                                </div>
+                            <div class="w-100">
+                                <a asp-action="Details" class="btn btn-outline-dark form-control" asp-route-id="@product.Id">Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
             }
         </div>
+        <h4 id="noProductMessage" class="text-center text-danger mt-3" style="display: none;">
+            No products available
+        </h4>
     </div>
+
+    <script>
+        function searchProducts() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var products = document.querySelectorAll(".product-card");
+            var noProductMessage = document.getElementById("noProductMessage");
+            var found = false;
+            products.forEach(function (product) {
+                var title = product.querySelector(".product-title").innerText.toLowerCase();
+                var author = product.querySelector(".product-author").innerText.toLowerCase();
+                if (title.includes(input) || author.includes(input)) {
+                    product.style.display = "block";
+                    found = true;
+                } else {
+                    product.style.display = "none";
+                }
+            });
+            // Show or hide "No products available" message
+            noProductMessage.style.display = found ? "none" : "block";
+        }
+    </script>
+
+
 </div>
 
 <style>
@@ -78,17 +100,17 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
 
-    .product-card .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 220px;
-    }
+        .product-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 220px;
+        }
 
     /* Carousel Image */
     .carousel-inner .carousel-item img {
@@ -97,9 +119,9 @@
         transition: transform 0.3s ease;
     }
 
-    .carousel-inner .carousel-item img:hover {
-        transform: scale(1.05);
-    }
+        .carousel-inner .carousel-item img:hover {
+            transform: scale(1.05);
+        }
 
     /* Price Styling */
     .price {
@@ -107,17 +129,17 @@
         margin-top: 10px;
     }
 
-    .price strike {
-        color: #6c757d;
-    }
+        .price strike {
+            color: #6c757d;
+        }
 
     .product-image {
         transition: transform 0.3s ease;
     }
 
-    .product-image:hover {
-        transform: scale(1.05);
-    }
+        .product-image:hover {
+            transform: scale(1.05);
+        }
 
     /* Button Styles */
     .btn-outline-dark {
@@ -127,11 +149,11 @@
         transition: all 0.3s ease;
     }
 
-    .btn-outline-dark:hover {
-        background-color: #343a40;
-        color: #fff;
-        border-color: #343a40;
-    }
+        .btn-outline-dark:hover {
+            background-color: #343a40;
+            color: #fff;
+            border-color: #343a40;
+        }
 
     .btn-primary {
         background-color: #007bff;
@@ -139,10 +161,10 @@
         transition: all 0.3s ease;
     }
 
-    .btn-primary:hover {
-        background-color: #0056b3;
-        border-color: #0056b3;
-    }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
 
     .category-label {
         position: absolute;
@@ -158,6 +180,7 @@
         transform-origin: top right;
         z-index: 10; /* Ensures it stays on top of the images */
     }
+
     .category-label {
         position: absolute;
         top: 20px;
@@ -173,10 +196,3 @@
         z-index: 10; /* Ensures it stays on top of the images */
     }
 </style>
-
-<script>
-    // Add to cart functionality (Example: display a message or update a counter)
-    function addToCart(productTitle) {
-        alert(productTitle + " has been added to your cart!");
-    }
-</script>
