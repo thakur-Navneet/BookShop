@@ -18,7 +18,7 @@ namespace BooksProject.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult AllDetails()
+        public IActionResult Authors()
         {
             var authorList = _unitOfWork.Author.GetAll();
             return View(authorList);

@@ -9,6 +9,10 @@
         IProductRepository Product { get; }
         IApplicationUserRepository ApplicationUser { get; }
         IBlogRepository Blog { get; }
+        IShoppingCartRepository ShoppingCart { get; }
+        IOrderHeaderRepository OrderHeader { get; }
+        IOrderDetailRepository OrderDetail { get; }
+
         void Save();
     }
 }

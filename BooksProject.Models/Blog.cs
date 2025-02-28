@@ -11,5 +11,6 @@ namespace BooksProject.Models
         public string Description { get; set; }
         [Display(Name ="Blog Image")]
         public string BlogImage { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

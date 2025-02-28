@@ -19,11 +19,7 @@ namespace BooksProject.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult AllDetails()
-        {
-            var productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType,Author");
-            return View(productList);
-        }
+        
         [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
         public IActionResult Index()
         {

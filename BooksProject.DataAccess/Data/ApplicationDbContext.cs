@@ -16,6 +16,10 @@ namespace BooksProject.DataAccess.Data
         public DbSet<Author> Authors  { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Blog> Blogs { get; set; } // add createdat column later
+        public DbSet<ShopppingCart> ShoppingCarts { get; set;}
+        public DbSet<OrderHeader> OrderHeaders { get; set;}
+        public DbSet<OrderDetail> OrderDetails { get; set;}
+
     }
 }

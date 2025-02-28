@@ -17,7 +17,7 @@ namespace BooksProject.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult AllDetails()
+        public IActionResult Blogs()
         {
             var blogList = _unitOfWork.Blog.GetAll();
             return View(blogList);
