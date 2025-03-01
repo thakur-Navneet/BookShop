@@ -91,33 +91,35 @@
             @foreach (var product in randomProducts)
             {
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card border-0 shadow-lg rounded-3 product-card position-relative">
-                        <div class="category-label">
-                            @product.Category.Name
-                        </div>
-                        <div id="productsliderinner" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="@product.ImageFeatured" class="d-block w-100 product-image" style="height: 350px; object-fit: cover;" alt="@product.Title" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="@product.ImageFirst" class="d-block w-100 product-image" style="height: 350px; object-fit: cover;" alt="@product.Title" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="@product.ImageSecond" class="d-block w-100 product-image" style="height: 350px; object-fit: cover;" alt="@product.Title" />
+                    <a asp-area="Customer" asp-controller="Shop" asp-action="Index" style="text-decoration: none;">
+                        <div class="card border-0 shadow-lg rounded-3 product-card position-relative">
+                            <div class="category-label">
+                                @product.Category.Name
+                            </div>
+                            <div id="productsliderinner" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="@product.ImageFeatured" class="d-block w-100 product-image" style="height: 350px; object-fit: cover;" alt="@product.Title" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="@product.ImageFirst" class="d-block w-100 product-image" style="height: 350px; object-fit: cover;" alt="@product.Title" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="@product.ImageSecond" class="d-block w-100 product-image" style="height: 350px; object-fit: cover;" alt="@product.Title" />
+                                    </div>
                                 </div>
                             </div>
+                            <div class="card-body text-center p-4">
+                                <h5 class="card-title text-dark mb-3 font-weight-bold" style="min-height: 70px;">@product.Title</h5>
+                                <p class="card-text text-muted mb-3">by @product.Author.Title</p>
+                                <p class="price">
+                                    <span class="text-dark">Price:</span> &nbsp;
+                                    <span class="text-muted"><strike>$@product.ListPrice.ToString("0.00")</strike></span> &nbsp;
+                                    <span class="text-danger font-weight-bold h5"> $@product.Price100.ToString("0.00")</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body text-center p-4">
-                            <h5 class="card-title text-dark mb-3 font-weight-bold" style="min-height: 70px;">@product.Title</h5>
-                            <p class="card-text text-muted mb-3">by @product.Author.Title</p>
-                            <p class="price">
-                                Price: &nbsp;
-                                <span class="text-muted"><strike>$@product.ListPrice.ToString("0.00")</strike></span> &nbsp;
-                                <span class="text-danger font-weight-bold h5"> $@product.Price100.ToString("0.00")</span>
-                            </p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             }
         </div>
@@ -258,8 +260,8 @@
             color: #e74c3c; /* Red for discounted price */
         }
     /********** Button for product ************/
-    
-   .btn-custom {
+
+    .btn-custom {
         background: #e94115; /* Gradient background */
         color: white;
         font-weight: bold;
@@ -271,23 +273,23 @@
         transition: all 0.4s ease-in-out;
     }
 
-    /* Button Hover Effects */
-    .btn-custom:hover {
-        background: linear-gradient(45deg, #38b9c5, #17a2b8); /* Reversed gradient on hover */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
-        transform: translateY(-5px); /* Slight lift effect */
-        color:#fff;
-    }
+        /* Button Hover Effects */
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #38b9c5, #17a2b8); /* Reversed gradient on hover */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+            transform: translateY(-5px); /* Slight lift effect */
+            color: #fff;
+        }
 
-    /* Button Active State */
-    .btn-custom:active {
-        transform: translateY(2px); /* Slight push-down effect when clicked */
-        box-shadow: none; /* Remove shadow when button is pressed */
-    }
+        /* Button Active State */
+        .btn-custom:active {
+            transform: translateY(2px); /* Slight push-down effect when clicked */
+            box-shadow: none; /* Remove shadow when button is pressed */
+        }
 
-    /* Focus State (when clicked or tabbed into) */
-    .btn-custom:focus {
-        outline: none; /* Remove focus outline */
-        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Add a glow effect when focused */
-    }
+        /* Focus State (when clicked or tabbed into) */
+        .btn-custom:focus {
+            outline: none; /* Remove focus outline */
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Add a glow effect when focused */
+        }
 </style>

@@ -1,4 +1,6 @@
 ﻿@model BooksProject.Models.ViewModels.ShoppingCartVM
+@using Microsoft.Extensions.Options
+@inject IOptions<BooksProject.Utility.StripeSettings> stripe;
 @{
     ViewData["Title"] = "Summary";
 }
@@ -104,8 +106,23 @@
                             <p style="color:maroon; font-size:14px;">Estimate Arrival Date: @DateTime.Now.AddDays(7).ToShortDateString() - @DateTime.Now.AddDays(14).ToShortDateString()</p>
                         </div>
                         <div class="col-12 col-md-4">
-
-                            <button type="submit" value="Place Order" class="btn btn-success form-control">Place Order</button>
+                            @{
+                                var orderTotalAmount = Model.OrderHeader.OrderTotal * 100;
+                            }
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="@stripe.Value.Publishablekey"
+                                data-amount="@orderTotalAmount"
+                                data-name="Book Shopping Project"
+                                data-description="Get Booking for testing"
+                                data-locale="auto"
+                                data-label="Place Order"
+                                data-allow-remeber-me="false"
+                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"></script>
+                            <script>
+                                var el =document.getElementByClassName('stripe-button-el');
+                                el[0].style.display="none";
+                            </script>
+                            @*<button type="submit" value="Place Order" class="btn btn-success form-control">Place Order</button>*@
                         </div>
                     </div>
                 </div>
