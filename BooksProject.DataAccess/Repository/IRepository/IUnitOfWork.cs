@@ -12,7 +12,7 @@
         IShoppingCartRepository ShoppingCart { get; }
         IOrderHeaderRepository OrderHeader { get; }
         IOrderDetailRepository OrderDetail { get; }
-
+        ISupportRepository Support { get; }
         void Save();
     }
 }

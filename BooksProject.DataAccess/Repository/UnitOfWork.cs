@@ -20,6 +20,7 @@ namespace BooksProject.DataAccess.Repository
             ShoppingCart = new ShoppingCartRepository(_context);
             OrderHeader = new OrderHeaderRepository(_context);
             OrderDetail = new OrderDetailRepository(_context);
+            Support = new SupportRepository(_context);
         }
 
         //public ICategoryRepository Category => throw new NotImplementedException();
@@ -33,6 +34,7 @@ namespace BooksProject.DataAccess.Repository
         public IShoppingCartRepository ShoppingCart { get; private set; }
         public IOrderHeaderRepository OrderHeader { get; private set; }
         public IOrderDetailRepository OrderDetail { get; private set; }
+        public ISupportRepository Support { get; private set; }
 
         public void Save()
         {

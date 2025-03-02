@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\Images\\Logo.png"
     },
     {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Part_BG.jpg",
+      "PackagePath": "staticwebassets\\Images\\Part_BG.jpg"
+    },
+    {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Productss\\1193a8b7-aa56-4174-8bf2-8c460ef1e2fb_1.jpg",
       "PackagePath": "staticwebassets\\Images\\Productss\\1193a8b7-aa56-4174-8bf2-8c460ef1e2fb_1.jpg"
     },
@@ -147,6 +151,10 @@
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Product.js",
       "PackagePath": "staticwebassets\\js\\Product.js"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Support.js",
+      "PackagePath": "staticwebassets\\js\\Support.js"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\User.js",

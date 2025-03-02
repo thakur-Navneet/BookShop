@@ -20,6 +20,7 @@ namespace BooksProject.DataAccess.Data
         public DbSet<ShopppingCart> ShoppingCarts { get; set;}
         public DbSet<OrderHeader> OrderHeaders { get; set;}
         public DbSet<OrderDetail> OrderDetails { get; set;}
+        public DbSet<Support> Supports { get; set; }
 
     }
 }

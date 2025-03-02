@@ -1,6 +1,10 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Author Page";
+    var bannerHeading = "Our Authors";
 }
+
+<partial name="_BannerTemplate" model="bannerHeading" />
 <div class="container mt-3">
     <h2 class="text-center text-info">Author's List</h2>
     <p class="text-center text-info">Lorem Ipsum Dolor Sit Amet</p>

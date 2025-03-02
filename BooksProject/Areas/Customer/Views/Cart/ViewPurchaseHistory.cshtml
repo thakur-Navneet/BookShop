@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "ViewPurchaseHistory";
+    var bannerHeading = "Purchase History";
+}
+<partial name="_BannerTemplate" model="bannerHeading" />
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var purchase in Model)
+        {
+            <div class="col-md-6 mb-5">
+                <div class="purchase-details p-3 border-bottom">
+                    <div class="purchase-title">
+                        <i class="fas fa-box"></i> <strong>Purchase:</strong><br /> #@purchase.TransactionId
+                    </div>
+                    <p><strong>Name:</strong> @purchase.Name</p>
+                    <p><strong>Order Status:</strong> @purchase.OrderStatus</p>
+                    <p><strong>Payment Status:</strong> @purchase.PaymentStatus</p>
+                    <p><strong>Transaction ID:</strong> @purchase.TransactionId</p>
+                    <p>
+                        <strong>Price </strong>
+                        @{
+                            double orderTotal = @purchase.OrderTotal / 100;
+                        }
+                        <span class="text-danger"> $ @orderTotal</span>
+                    </p>
+                    <address>
+                        <strong>Address:</strong>
+                        <span class="address-line">@purchase.StreetAddress</span>
+                        <span class="address-line">@purchase.City, @purchase.State</span>
+                        <span class="address-line"><strong>Pin: </strong> @purchase.PostalCode</span>
+                    </address>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<style>
+    .purchase-details {
+        box-shadow: 9px 5px 9px 0px #ccc;
+    }
+
+
+        .purchase-details p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+            .purchase-details p strong {
+                font-weight: bold;
+                color: #333;
+            }
+
+    address {
+        font-style: normal;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .address-line {
+        margin-top: 5px;
+    }
+
+    .purchase-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .purchase-details i {
+        color: #007bff;
+    }
+
+    .purchase-details .btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+        .purchase-details .btn:hover {
+            background-color: #0056b3;
+        }
+
+</style>

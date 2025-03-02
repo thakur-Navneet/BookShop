@@ -29,11 +29,11 @@
         <div class="container-fluid bg-light" style="font-family: 'Poppins', serif; border-bottom: 1px solid #c1c1c1;">
             <div class="container-md">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <a class="nav-link text-dark px-0 pt-3" asp-area="" asp-controller="" asp-action="">Find Our BookStore</a>
+                    <div class="col-4">
+                        <a class="nav-link text-dark px-0 pt-3" asp-area="" asp-controller="" asp-action="">Our Shops</a>
                     </div>
-                    <div class="col-lg-4">
-                        <ul class="nav">
+                    <div class="col-4">
+                        <ul class="nav justify-content-center">
                             @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
                             {
                                 <li class="nav-item dropdown">
@@ -45,6 +45,8 @@
                                         <a class="dropdown-item" asp-area="Admin" asp-controller="Author" asp-action="Index">Authors</a>
                                         <a class="dropdown-item" asp-area="Admin" asp-controller="Blog" asp-action="Index">Blogs</a>
                                         <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Support" asp-action="Index">Support</a>
+                                        <a class="dropdown-item" asp-area="Customer" asp-controller="Cart" asp-action="ViewPurchaseHistory">Product History</a>
                                     </div>
                                 </li>
                             }
@@ -79,7 +81,7 @@
                             }
                         </ul>
                     </div>
-                    <div class="col-lg-4 py-1">
+                    <div class="col-4 py-1">
                         <partial name="_LoginPartial" />
                     </div>
                 </div>
@@ -98,7 +100,7 @@
                         </div>
                         @*Toggler for mobile*@
                         <div class="col-6 col-sm-4 col-lg-1">
-                            <button class="navbar-toggler float-right" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                            <button class="navbar-toggler float-right mt-2" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -106,7 +108,7 @@
                         @*Navigation links*@
                         <div class="col-12 col-lg-6">
                             <div class="navbar-collapse collapse">
-                                <ul class="navbar-nav ms-auto mt-3">
+                                <ul class="navbar-nav ms-auto mt-3 pl-3 ml-5">
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                                     </li>
@@ -123,7 +125,7 @@
                                         <a class="nav-link text-dark" asp-area="Admin" asp-controller="Author" asp-action="Authors">Authors</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Support</a>
+                                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Support" asp-action="Support">Faqs</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Contact</a>

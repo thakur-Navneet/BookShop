@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Support Page";
+    var bannerHeading = "Frequently Asked Questions";
+}
+<partial name="_BannerTemplate" model="bannerHeading" />
+<div class="container mt-3">
+    <h3 class="text-center text-info">Ask Your Queries</h3>
+    <p class="text-center text-info">Lorem Ipsum Dolor Sit Amet</p>
+    
+    <input type="text" id="searchInput" onkeyup="searchSupport()" placeholder="Search for queries..." class="form-control my-3" />
+
+    <div class="row" id="supportCont">
+        @foreach (var support in Model)
+        {
+            <div class="col-md-4 support-item" style="display: none;">
+                <!-- Initially hide all support items -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@support.Question</h5>
+                        <p class="card-text">@support.Answer</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div id="noResultsMessage" class="text-center text-danger" style="display:none;">
+        <p>For more queries, contact us at <a href="mailto:Developer@gmail.com">Developer@gmail.com</a></p>
+    </div>
+</div>
+
+<script>
+    function searchSupport() {
+        var input, filter, container, items, query, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        container = document.getElementById("supportCont"); // Updated to match the container ID
+        items = container.getElementsByClassName('support-item'); // Each card is now a 'support-item'
+        var noResultsMessage = document.getElementById("noResultsMessage");
+        var matchFound = false;
+
+        // If input is empty, hide all items and clear the "No Results" message
+        if (input.value === "") {
+            for (i = 0; i < items.length; i++) {
+                items[i].style.display = "none";
+            }
+            noResultsMessage.style.display = "none";
+            return; // Exit the function as there's no need to continue further if input is empty
+        }
+
+        // Otherwise, filter through the items
+        for (i = 0; i < items.length; i++) {
+            query = items[i].getElementsByClassName("card-title")[0];
+
+            // Check if the title exists, then filter
+            if (query) {
+                txtValue = query.textContent || query.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = ""; // Show the item if it matches the filter
+                    matchFound = true;
+                } else {
+                    items[i].style.display = "none"; // Hide the item if it doesn't match
+                }
+            }
+        }
+
+        // Show the "No Results" message if no matches were found
+        if (!matchFound) {
+            noResultsMessage.style.display = "block";
+        } else {
+            noResultsMessage.style.display = "none";
+        }
+    }
+</script>

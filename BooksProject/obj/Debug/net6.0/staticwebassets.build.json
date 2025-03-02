@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vDkwRvpDylUX+td10oR/IZTTsFPN3hi99l9BAMlpxag=",
+  "Hash": "xBUAlr8bEHbzKQI3OdfCM2EACnlz2JDzq8QKUVz/DVo=",
   "Source": "BooksProject",
   "BasePath": "_content/BooksProject",
   "Mode": "Default",
@@ -1292,6 +1292,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Logo.png"
     },
     {
+      "Identity": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Part_BG.jpg",
+      "SourceId": "BooksProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\",
+      "BasePath": "_content/BooksProject",
+      "RelativePath": "Images/Part_BG.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Part_BG.jpg"
+    },
+    {
       "Identity": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Productss\\1193a8b7-aa56-4174-8bf2-8c460ef1e2fb_1.jpg",
       "SourceId": "BooksProject",
       "SourceType": "Discovered",
@@ -1698,6 +1715,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Support.js",
+      "SourceId": "BooksProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\",
+      "BasePath": "_content/BooksProject",
+      "RelativePath": "js/Support.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Support.js"
     },
     {
       "Identity": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\User.js",

@@ -1,9 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Blog Page";
+    var bannerHeading = "Blogs";
 }
+
+<partial name="_BannerTemplate" model="bannerHeading" />
 <div class="container mt-3">
     <h2 class="text-center text-info">Blog's List</h2>
-    <input type="text" id="searchInput" class="form-control" placeholder="Search authors..." onkeyup="searchAuthors()" />
     <div class="row mt-3" id="authorsCont">
         @foreach (var bblog in Model)
         {
