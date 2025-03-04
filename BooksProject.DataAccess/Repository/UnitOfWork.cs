@@ -11,16 +11,17 @@ namespace BooksProject.DataAccess.Repository
         {
             _context = context; // Storing the provided context for use in the repositories.
             Category = new CategoryRepository(_context);  // Initializing the Category repository.
-            Covertype = new CoverTypeRepository(_context); 
+            Covertype = new CoverTypeRepository(_context);
             Company = new CompanyRepository(_context);
             Author = new AuthorRepository(_context);
-            Product= new ProductRepository(_context);
+            Product = new ProductRepository(_context);
             ApplicationUser = new ApplicationUserRepository(_context);
             Blog = new BlogRepository(_context);
             ShoppingCart = new ShoppingCartRepository(_context);
             OrderHeader = new OrderHeaderRepository(_context);
             OrderDetail = new OrderDetailRepository(_context);
             Support = new SupportRepository(_context);
+            Contact = new ContactRepository(_context);
         }
 
         //public ICategoryRepository Category => throw new NotImplementedException();
@@ -35,7 +36,7 @@ namespace BooksProject.DataAccess.Repository
         public IOrderHeaderRepository OrderHeader { get; private set; }
         public IOrderDetailRepository OrderDetail { get; private set; }
         public ISupportRepository Support { get; private set; }
-
+        public IContactRepository Contact { get; private set; }
         public void Save()
         {
             _context.SaveChanges();  // Save all changes made to the database context

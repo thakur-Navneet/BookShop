@@ -10,14 +10,14 @@
             <div class="col-md-6 mb-5">
                 <div class="purchase-details p-3 border-bottom">
                     <div class="purchase-title">
-                        <i class="fas fa-box"></i> <strong>Purchase:</strong><br /> #@purchase.TransactionId
+                        <i class="fas fa-box"></i> <strong>Purchased by:</strong> @purchase.Name
                     </div>
-                    <p><strong>Name:</strong> @purchase.Name</p>
-                    <p><strong>Order Status:</strong> @purchase.OrderStatus</p>
+                    <p><strong>User ID:</strong> @purchase.ApplicationUserId</p>
+                    <p><strong>Order Date:</strong> @purchase.OrderDate</p>
                     <p><strong>Payment Status:</strong> @purchase.PaymentStatus</p>
                     <p><strong>Transaction ID:</strong> @purchase.TransactionId</p>
                     <p>
-                        <strong>Price </strong>
+                        <strong>Price: </strong>
                         @{
                             double orderTotal = @purchase.OrderTotal / 100;
                         }
@@ -25,7 +25,7 @@
                     </p>
                     <address>
                         <strong>Address:</strong>
-                        <span class="address-line">@purchase.StreetAddress</span>
+                        <span class="address-line">@purchase.StreetAddress, </span>
                         <span class="address-line">@purchase.City, @purchase.State</span>
                         <span class="address-line"><strong>Pin: </strong> @purchase.PostalCode</span>
                     </address>
@@ -65,7 +65,6 @@
         font-size: 24px;
         color: #333;
         margin-bottom: 10px;
-        font-weight: bold;
     }
 
     .purchase-details i {

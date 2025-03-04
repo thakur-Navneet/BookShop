@@ -37,7 +37,7 @@
                             <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
                         </div>
 
-                        <div class="mb-4">
+@*                        <div class="mb-4">
                             <div class="row">
                                 <div class="col-3 text-primary"><h4>Quantity</h4></div>
                                 <div class="col-9">
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                         </div>
-
+*@
                     </div>
 
                     <div class="col-12 col-lg-5">
@@ -146,7 +146,7 @@
 
     .carousel-item img {
         height: 400px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .card-footer button, .card-footer a {
@@ -182,9 +182,7 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .product-title, .text-muted, .text-primary {
-        font-family: 'Arial', sans-serif;
-    }
+    
 
     .p-3 {
         padding: 1rem;

@@ -68,16 +68,19 @@ namespace BooksProject.Areas.Admin.Controllers
             {
                 var webRootPath = _webHostEnvironment.WebRootPath;
                 var files = HttpContext.Request.Form.Files;
+
                 if (files.Count() > 0)
                 {
                     var fileName = Guid.NewGuid().ToString();
                     var extension = Path.GetExtension(files[0].FileName);
                     var uploads = Path.Combine(webRootPath, @"Images\Blogss");
+
                     if (bllog.Id != 0)
                     {
                         var imageExists = _unitOfWork.Author.Get(bllog.Id).AuthorImage;
                         bllog.BlogImage = imageExists;
                     }
+
                     if (bllog.BlogImage != null)
                     {
                         var imagePath = Path.Combine(webRootPath, bllog.BlogImage.Trim('\\'));
@@ -86,6 +89,7 @@ namespace BooksProject.Areas.Admin.Controllers
                             System.IO.File.Delete(imagePath);
                         }
                     }
+
                     using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
                     {
                         files[0].CopyTo(fileStream);
@@ -100,11 +104,23 @@ namespace BooksProject.Areas.Admin.Controllers
                         bllog.BlogImage = imagePath;
                     }
                 }
+
+                // Check if it's a new Blog or an update
                 if (bllog.Id == 0)
+                {
+                    // New blog, set CreatedDate
+                    bllog.CreatedAt = DateTime.Now;
                     _unitOfWork.Blog.Add(bllog);
+                }
                 else
+                {
+                    // Existing blog, set UpdatedDate
+                    bllog.CreatedAt = DateTime.Now;
                     _unitOfWork.Blog.Update(bllog);
+                }
+
                 _unitOfWork.Save();
+
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -116,7 +132,63 @@ namespace BooksProject.Areas.Admin.Controllers
                 }
                 return View(bllog);
             }
-
         }
+
+        //public ActionResult Upsert(Blog bllog)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var webRootPath = _webHostEnvironment.WebRootPath;
+        //        var files = HttpContext.Request.Form.Files;
+        //        if (files.Count() > 0)
+        //        {
+        //            var fileName = Guid.NewGuid().ToString();
+        //            var extension = Path.GetExtension(files[0].FileName);
+        //            var uploads = Path.Combine(webRootPath, @"Images\Blogss");
+        //            if (bllog.Id != 0)
+        //            {
+        //                var imageExists = _unitOfWork.Author.Get(bllog.Id).AuthorImage;
+        //                bllog.BlogImage = imageExists;
+        //            }
+        //            if (bllog.BlogImage != null)
+        //            {
+        //                var imagePath = Path.Combine(webRootPath, bllog.BlogImage.Trim('\\'));
+        //                if (System.IO.File.Exists(imagePath))
+        //                {
+        //                    System.IO.File.Delete(imagePath);
+        //                }
+        //            }
+        //            using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+        //            {
+        //                files[0].CopyTo(fileStream);
+        //            }
+        //            bllog.BlogImage = @"\Images\Blogss\" + fileName + extension;
+        //        }
+        //        else
+        //        {
+        //            if (bllog.Id != 0)
+        //            {
+        //                var imagePath = _unitOfWork.Blog.Get(bllog.Id).BlogImage;
+        //                bllog.BlogImage = imagePath;
+        //            }
+        //        }
+        //        if (bllog.Id == 0)
+        //            _unitOfWork.Blog.Add(bllog);
+        //        else
+        //            _unitOfWork.Blog.Update(bllog);
+        //        _unitOfWork.Save();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    else
+        //    {
+        //        bllog = new Blog();
+        //        if (bllog.Id != 0)
+        //        {
+        //            bllog = _unitOfWork.Blog.Get(bllog.Id);
+        //        }
+        //        return View(bllog);
+        //    }
+
+        //}
     }
 }

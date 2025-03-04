@@ -30,8 +30,33 @@ namespace BooksProject.Areas.Customer.Controllers
                     (sc => sc.ApplicationUserId == claim.Value).ToList().Count;
                 HttpContext.Session.SetInt32(SD.Ss_CartSessionCount, count);
             }
+            /*
             var productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType,Author");
+            var BlogList = _unitOfWork.Blog.GetAll();            
+            //var data = (Products: productList, Blogs: BlogList);
             return View(productList);
+            */
+            var randomProducts = _unitOfWork.Product
+                .GetAll(includeProperties: "Category,CoverType,Author")
+                .OrderBy(x => Guid.NewGuid())  // Randomize products
+                .Take(3)  // Select 3 random products
+                .ToList();
+            var randomBlogs = _unitOfWork.Blog
+                                .GetAll()
+                                .OrderBy(x => Guid.NewGuid())  // Randomize blogs
+                                .Take(2)  // Select 2 random blogs
+                                .ToList();
+
+            // Create ViewModel instance and pass data
+            var viewModel = new HomeViewModel
+            {
+                Products = randomProducts,
+                Blogs = randomBlogs
+            };
+
+            return View(viewModel); // Make sure you are returning 'viewModel'
+
+
         }
 
 
@@ -40,6 +65,10 @@ namespace BooksProject.Areas.Customer.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

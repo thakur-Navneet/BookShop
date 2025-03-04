@@ -1,0 +1,133 @@
+﻿@model BooksProject.Models.Contact
+@{
+    ViewData["Title"] = "Contact Us";
+    var bannerHeading = "Contact Us";
+    var title = Model.Id == 0 ? "Get Connected With Us" : "Edit Contact";
+    var saveUpdate = Model.Id != 0 ? "Update" : "Save";
+}
+<partial name="_BannerTemplate" model="bannerHeading" />
+<div class="container my-5">
+    <!-- Main Row -->
+    <div class="row">
+        <!-- Left Side (Map) -->
+        <div class="col-md-6">
+            <div class="map-container">
+                <!-- Embed Google Map (Replace with your map URL) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4530238422653!2d144.96305851531526!3d-37.813611979751605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5fa2a70e5d%3A0x5045675218cdab0!2zMzcuODExMCwgMTQ0LjYzNjEgVm9jdWVsYSwgaW4gQXVzdHJhbGlh!5e0!3m2!1sen!2sus!4v1651324613156!5m2!1sen!2sus" style="border:0; width:100%; height:560px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Right Side (Contact Form) -->
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <form method="post">
+                    <div class="card-header text-center">
+                        <h3>@title</h3>
+                    </div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group row p-2">
+                        <div class="col-3">
+                            <label asp-for="Name"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row p-2">
+                        <div class="col-3">
+                            <label asp-for="Email"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row p-2">
+                        <div class="col-3">
+                            <label asp-for="Subject"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Subject" class="form-control" />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row p-2">
+                        <div class="col-3">
+                            <label asp-for="Message"></label>
+                        </div>
+                        <div class="col-9">
+                            <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row p-2">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-info form-control">
+                                @saveUpdate
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Map container styling */
+    .map-container iframe {
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+        .map-container iframe:hover {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Card and form styling */
+    .card {
+        transition: box-shadow 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+        .card:hover {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Card header */
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Interactive Button */
+    button.btn-info {
+        background-color: #17a2b8;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+        button.btn-info:hover {
+            background-color: #138496;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Office section styling */
+    .card-body {
+        text-align: center;
+    }
+
+        .card-body h4 {
+            font-weight: bold;
+        }
+
+        .card-body p {
+            font-size: 1.1rem;
+        }
+</style>
+@section Scripts
+    {
+    <partial name="_ValidationScriptsPartial" />
+}

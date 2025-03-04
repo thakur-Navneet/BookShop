@@ -3,29 +3,146 @@
     var bannerHeading = "Frequently Asked Questions";
 }
 <partial name="_BannerTemplate" model="bannerHeading" />
-<div class="container mt-3">
-    <h3 class="text-center text-info">Ask Your Queries</h3>
-    <p class="text-center text-info">Lorem Ipsum Dolor Sit Amet</p>
-    
-    <input type="text" id="searchInput" onkeyup="searchSupport()" placeholder="Search for queries..." class="form-control my-3" />
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="text-info">Ask Your Queries</h3>
+                <p class="text-info">Lorem Ipsum Dolor Sit Amet</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group mt-3">
+                    <input type="text" id="searchInput" onkeyup="searchSupport()" placeholder="Search for queries..." class="form-control" />
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="supportCont">
+            @foreach (var support in Model)
+            {
+                <div class="col-md-4 support-item" style="display: none;">
+                    <!-- Initially hide all support items -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@support.Question</h5>
+                            <p class="card-text">@support.Answer</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div id="noResultsMessage" class="text-center text-danger" style="display:none;">
+            <p>For more queries, contact us at <a href="mailto:Developer@gmail.com">Developer@gmail.com</a> or </p>
+            <a type="btn btn-outline-danger" asp-area="Customer" asp-controller="Contact" asp-action="Index">Contact</a>
+        </div>
+    </div>
 
-    <div class="row" id="supportCont">
-        @foreach (var support in Model)
-        {
-            <div class="col-md-4 support-item" style="display: none;">
-                <!-- Initially hide all support items -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">@support.Question</h5>
-                        <p class="card-text">@support.Answer</p>
+</div>
+<div class="container-fluid py-5" style="background-color: #fafafa;">
+    <div class="container">
+        <h2 class="text-center mb-3">Frequently Asked Question</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="accordionLeft">
+                    <div class="card">
+                        <div class="card-header" id="headingOneLeft">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneLeft" aria-expanded="false" aria-controls="collapseOneLeft">
+                                    What is the return policy for purchased books?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOneLeft" class="collapse" aria-labelledby="headingOneLeft" data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Our return policy allows you to return purchased books within 30 days of delivery. The books should be in their original condition and packaging. Refunds will be issued to your original payment method once we receive the returned items.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwoLeft">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwoLeft" aria-expanded="false" aria-controls="collapseTwoLeft">
+                                    Can I change the address after placing the order?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwoLeft" class="collapse" aria-labelledby="headingTwoLeft" data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Once an order is placed, it is processed quickly. However, if you wish to change the shipping address, please contact our customer support team immediately. If the order hasn't been shipped, we can update your address. If it’s already shipped, address changes are not possible.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThreeLeft">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThreeLeft" aria-expanded="false" aria-controls="collapseThreeLeft">
+                                    Do you offer international shipping for book orders?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThreeLeft" class="collapse" aria-labelledby="headingThreeLeft" data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Yes, we offer international shipping for book orders. Shipping fees and delivery times may vary depending on your location. For an accurate estimate, please check the shipping options during checkout. We work with trusted international carriers to ensure timely and secure delivery worldwide.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        }
-    </div>
+            <div class="col-lg-6">
+                <div id="accordionRight">
+                    <div class="card">
+                        <div class="card-header" id="headingOneRight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneRight" aria-expanded="false" aria-controls="collapseOneRight">
+                                    Can I gift books to someone through your website?
+                                </button>
+                            </h5>
+                        </div>
 
-    <div id="noResultsMessage" class="text-center text-danger" style="display:none;">
-        <p>For more queries, contact us at <a href="mailto:Developer@gmail.com">Developer@gmail.com</a></p>
+                        <div id="collapseOneRight" class="collapse" aria-labelledby="headingOneRight" data-parent="#accordionRight">
+                            <div class="card-body">
+                                Yes, we offer a gift option for book purchases. During checkout, you can select the “Gift” option and provide the recipient's address. You can also include a personalized message to make your gift extra special. We ensure the books are wrapped and sent with care.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwoRight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwoRight" aria-expanded="false" aria-controls="collapseTwoRight">
+                                    How do I know if a book is in stock or not?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwoRight" class="collapse" aria-labelledby="headingTwoRight" data-parent="#accordionRight">
+                            <div class="card-body">
+                                Each product page on our website displays the availability status of books. If a book is out of stock, we offer the option to be notified once it becomes available again. You can also check with our customer support team for real-time stock updates.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThreeRight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThreeRight" aria-expanded="false" aria-controls="collapseThreeRight">
+                                    Can I choose my currency I pay in?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThreeRight" class="collapse" aria-labelledby="headingThreeRight" data-parent="#accordionRight">
+                            <div class="card-body">
+                                You can choose your country and your currency on top of any page to make your navigation easy as well as at the checkout point.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -72,3 +189,66 @@
         }
     }
 </script>
+<style>
+    .card-header {
+        background-color: #e94115;
+        color: white;
+        font-weight: bold;
+        text-align: left !important;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .card-header:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-link {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+        .btn-link:focus, .btn-link:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+    .card-body {
+        background-color: #f1f1f1;
+        font-size: 16px;
+        padding: 20px;
+        border-top: 2px solid #e9ecef;
+        border-bottom: 2px solid #e9ecef;
+        transition: background-color 0.3s ease;
+    }
+
+        .card-body:hover {
+            background-color: #e9ecef;
+        }
+
+    /* Smooth transition for collapsing */
+    .collapse {
+        transition: height 0.5s ease-out;
+    }
+
+    /* Add a little box-shadow on the card */
+    .card {
+        margin-bottom: 10px;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .card-footer {
+        background-color: #f8f9fa;
+        border-top: 1px solid #e9ecef;
+        text-align: center;
+        padding: 10px;
+    }
+
+        .card-footer small {
+            font-size: 14px;
+        }
+</style>

@@ -4,14 +4,20 @@
 }
 <partial name="_BannerTemplate" model="bannerHeading" />
 <div class="container-fluid py-5" style="background-color: #fafafa;">
-    <!-- Section Title -->
-    <div class="container text-center mb-5">
-        <h2 class="section-title text-info">Our Featured Products</h2>
-        <p class="lead text-muted section-description">Browse our carefully selected products. Get them before they are gone!</p>
-    </div>
     <div class="container">
-        <div class="input-group">
-            <input type="text" id="searchInput" class="form-control" placeholder="Search products..." onkeyup="searchProducts()" />
+        <div class="row">
+            <div class="col-lg-8">
+                <h3>Our All Books</h3>
+                <p class="lead text-muted section-description">Browse our carefully selected products. Get them before they are gone!</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group mt-3">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search products..." onkeyup="searchProducts()" />
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+            </div>
         </div>
 
         <div class="row mt-5" id="productContainer">

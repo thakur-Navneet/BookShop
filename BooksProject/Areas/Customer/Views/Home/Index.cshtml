@@ -1,19 +1,18 @@
-﻿@using System.Linq
-@model IEnumerable<Product>
+﻿@model BooksProject.Models.ViewModels.HomeViewModel
 @{
     ViewData["Title"] = "Home Page";
-    var randomProducts = Model.OrderBy(x => Guid.NewGuid()).Take(3).ToList();
+    //var randomProducts = Model.OrderBy(x => Guid.NewGuid()).Take(3).ToList();
 }
+
 <div class="container-fluid py-5" style="background-color: #f2ede3;">
     <div id="topslider1" class="carousel slide" data-ride="carousel">
-
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h3 class="display-4 pt-5 mt-5">Dive into the <span style="color: #e94115; font-weight:600">Pulse </span><br /> of Modern Culture </h3>
-                            <p class="text-secondary">Lorem Impsu  dolr sir amet</p>
+                            <h3 class="display-4 pt-5 mt-5">Dive into the <span style="color: #e94115; font-weight:600">Pulse</span><br /> of Modern Culture</h3>
+                            <p class="text-secondary">Lorem Ipsum dolor sit amet</p>
                         </div>
                         <div class="col-lg-6">
                             <img src="/Images/imageC2.png" class="w-100" />
@@ -25,8 +24,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h3 class="display-4 pt-5 mt-5">Our <span style="color: #e94115; font-weight:600">Sci Fi</span> & Fantasy Picks </h3>
-                            <p class="text-secondary">Lorem Impsu  dolr sir amet</p>
+                            <h3 class="display-4 pt-5 mt-5">Our <span style="color: #e94115; font-weight:600">Sci-Fi</span> & Fantasy Picks</h3>
+                            <p class="text-secondary">Lorem Ipsum dolor sit amet</p>
                         </div>
                         <div class="col-lg-6">
                             <img src="/Images/imageC1.png" class="w-100" />
@@ -79,6 +78,17 @@
         </div>
     </div>
 </div>
+@*<div class="container-fluid bg1">
+    <div class="container">
+        <div class="">
+            <h4 class="text-uppercase text-light">new collections</h4>
+            <h2 class="text-light">Book festival</h2>
+            <p class="text-light">All Books are flat 50% Off</p>
+            <a class="btn btn-outline-light" asp-area="Customer" asp-controller="Shop" asp-action="Index">View More</a>
+
+        </div>
+    </div>
+</div>*@
 <div class="container-fluid py-5" style="background-color: #f2ede3;">
     <div class="container text-center">
         <h2 class="section-title">Our Featured Products</h2>
@@ -87,7 +97,7 @@
 
     <div class="container">
         <div class="row">
-            @foreach (var product in randomProducts)
+            @foreach (var product in Model.Products)
             {
                 <div class="col-lg-4 col-md-6 mb-4">
                     <a asp-area="Customer" asp-controller="Shop" asp-action="Index" style="text-decoration: none;">
@@ -127,9 +137,43 @@
         </div>
     </div>
 </div>
-<div class="container-fluid my-5">
-    <img src="/Images/banner-6.jpg" class="img-fluid" alt="Popular Books">
-
+<div class="container-fluid py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Our Featured Blogs</h2>
+        <p class="text-center mb-5">Latest articles and insights</p>
+        @foreach (var blog in Model.Blogs)
+        {
+            <div class="row mb-5">
+                <div class="col-lg-5">
+                    <img src="@blog.BlogImage" class="card-img-top" style="height: 270px; object-fit: cover;" alt="@blog.Title" />
+                </div>
+                <div class="col-lg-7 border-bottom">
+                    <h5 class="card-title">@blog.Title</h5>
+                    <p class="card-text">
+                        @(blog.Description.Length > 99 ? blog.Description.Substring(0, 99) + "..." : blog.Description)
+                    </p>
+                    <p class="card-text text-muted">
+                        <small>@blog.CreatedAt.ToString("yyyy-MM-dd HH:mm")</small>
+                    </p>
+                    <a class="btn btn-sm btn-custom" asp-area="Admin" asp-controller="Blog" asp-action="Blogs">Read More</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="container-fluid py-5" style="background-color: #f2ede3; margin-bottom: -20px;">
+    <div class="container">
+        @*Subscription Section *@
+        <div class="row">
+            <div class="col-lg-10">
+                <h3 class="text-dark">Join the community</h3>
+                <p class="text-dark">Enter your email address to receive regular updates, as well as news on upcoming events and specific offers.</p>
+            </div>
+            <div class="col-lg-2 mt-3">
+                <a asp-area="Customer" asp-controller="Contact" asp-action="Index" class="btn btn-lg btn-outline-dark">Subscribe</a>
+            </div>
+        </div>
+    </div>
 </div>
 <style>
 
@@ -291,4 +335,43 @@
             outline: none; /* Remove focus outline */
             box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Add a glow effect when focused */
         }
+
+
+
+
+
+    /******************Blog***************/
+    .subscribe-section {
+        background-color: #e94115;
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+
+        .subscribe-section img {
+            max-width: 200px;
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+        }
+
+    .subscribe-input {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .bg1 {
+        background: url(/Images/banner-6.jpg);
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 80px 0px;
+        height: 350px;
+    }
 </style>

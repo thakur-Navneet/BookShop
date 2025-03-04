@@ -1,9 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+    var bannerHeading = "Privacy Policy";
 }
-<div class="container mt-3">
 
-    <h2>@ViewData["Title"]</h2>
+<partial name="_BannerTemplate" model="bannerHeading" />
+<div class="container mt-3">
 
     <p>Welcome to our bookstore website. At Navi Bookstore, we are committed to protecting your privacy and ensuring a safe online shopping experience. This privacy policy explains how we collect, use, and safeguard your personal information.</p>
     <h3>1. Information We Collect</h3>

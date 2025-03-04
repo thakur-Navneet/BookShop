@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "About";
+    var bannerHeading = "About Us";
+}
+<partial name="_BannerTemplate" model="bannerHeading" />
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="feature-box text-center py-2 px-4">
+                    <img src="/Images/AboutPage/About1.png" class="img-fluid mb-2" />
+                    <h5>Make the Best Present</h5>
+                    <p>A book is still one of the best presents for anyone on any occasion.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box text-center py-2 px-4">
+                    <img src="/Images/AboutPage/About2.png" class="img-fluid mb-2" />
+                    <h5>Find Your Favorite Authors</h5>
+                    <p>Great writers are pretty inspiring, so we offer the widest selection.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box text-center py-2 px-4">
+                    <img src="/Images/AboutPage/About3.png" class="img-fluid mb-2" />
+                    <h5>6 Million Books Available</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli sit amet.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box text-center py-2 px-4">
+                    <img src="/Images/AboutPage/About4.png" class="img-fluid mb-2" />
+                    <h5>Read Reader’s Reviews</h5>
+                    <p>You will find reviews of magazines, online in our website.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-5" style="background-color: #f2ede3;">
+    <div class="container">
+        <h3> Our History</h3>
+        <p>
+            Our mission is to bring the passion and love for reading books back. whether it’s a regular paper book, or an online edition,
+            we want our readers to know that we appreciate quality and artful storytelling. Join our community and enjoy multiple genres,
+            modern and classic authors, reviews, critics and more!
+        </p>
+        <p>
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        </p>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="/Images/AboutPage/banner1.jpg" class="img-fluid" />
+            </div>
+            <div class="col-lg-4">
+                <img src="/Images/AboutPage/banner2.jpg" class="img-fluid" />
+            </div>
+            <div class="col-lg-4">
+                <img src="/Images/AboutPage/banner3.jpg" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-5">
+    <div class="container">
+        <h3 class="text-center">Meet Our Team</h3>
+        <p class="text-center">Lorem Ipsum Dolor Sit AMet</p>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="/Images/AboutPage/out1.jpg" class="img-thumbnail" />
+                <h4 class="text-center ourteam">Crystal Capper</h4>
+                <p class="text-center ourteam">Chief Executive Officer</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="/Images/AboutPage/out-2.jpg" class="img-thumbnail" />
+                <h4 class="text-center ourteam">Haliegh Walter</h4>
+                <p class="text-center ourteam">Managing Director</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="/Images/AboutPage/out-4.jpg" class="img-thumbnail" />
+                <h4 class="text-center ourteam">Robert Smith</h4>
+                <p class="text-center ourteam">Team Leader</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="/Images/AboutPage/out-3.jpg" class="img-thumbnail" />
+                <h4 class="text-center ourteam">Kaya Luettegen</h4>
+                <p class="text-center ourteam">Senior Developer</p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .feature-box {
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        height: 240px;
+    }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box h5 {
+            color: #e94115;
+        }
+</style>

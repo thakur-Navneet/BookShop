@@ -21,6 +21,7 @@ namespace BooksProject.DataAccess.Data
         public DbSet<OrderHeader> OrderHeaders { get; set;}
         public DbSet<OrderDetail> OrderDetails { get; set;}
         public DbSet<Support> Supports { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
     }
 }

@@ -10,7 +10,7 @@ using System.Security.Claims;
 namespace BooksProject.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
+    [Authorize]
     public class CartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -192,6 +192,7 @@ namespace BooksProject.Areas.Customer.Controllers
         {
             return View(id);
         }
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
         public IActionResult ViewPurchaseHistory()
         {
             var ProductHistory = _unitOfWork.OrderHeader.GetAll();

@@ -5,28 +5,96 @@
       "PackagePath": "staticwebassets\\BooksProject.bundle.scp.css"
     },
     {
-      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Authorss\\422529b6-bce7-4e1a-8576-2158d72e4900.jpg",
-      "PackagePath": "staticwebassets\\Images\\Authorss\\422529b6-bce7-4e1a-8576-2158d72e4900.jpg"
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\About1.png",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\About1.png"
     },
     {
-      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Authorss\\a6b5b25c-ca9b-45c0-b3ac-dcb342237252.jpg",
-      "PackagePath": "staticwebassets\\Images\\Authorss\\a6b5b25c-ca9b-45c0-b3ac-dcb342237252.jpg"
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\About2.png",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\About2.png"
     },
     {
-      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Authorss\\e363bc6a-1128-4b70-bcc9-2adfb68f2410.jpg",
-      "PackagePath": "staticwebassets\\Images\\Authorss\\e363bc6a-1128-4b70-bcc9-2adfb68f2410.jpg"
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\About3.png",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\About3.png"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\About4.png",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\About4.png"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\banner1.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\banner1.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\banner2.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\banner2.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\banner3.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\banner3.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\out-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\out-2.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\out-3.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\out-3.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\out-4.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\out-4.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\out1.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutPage\\out1.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Authorss\\6a0b5dd4-c108-41ab-b04f-390df805cc64.jpg",
+      "PackagePath": "staticwebassets\\Images\\Authorss\\6a0b5dd4-c108-41ab-b04f-390df805cc64.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Authorss\\936069ac-4dea-4a8e-9fdf-da3cdc3de7bf.jpg",
+      "PackagePath": "staticwebassets\\Images\\Authorss\\936069ac-4dea-4a8e-9fdf-da3cdc3de7bf.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Authorss\\9448e9a7-2aba-4875-838e-f006ceed28c6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Authorss\\9448e9a7-2aba-4875-838e-f006ceed28c6.jpg"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\14a50a1a-96a2-4569-8696-803a5ed24ab9.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogss\\14a50a1a-96a2-4569-8696-803a5ed24ab9.jpg"
     },
     {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\280a89a4-8c1f-408d-8f05-9ed31360b3fe.jpg",
+      "PackagePath": "staticwebassets\\Images\\Blogss\\280a89a4-8c1f-408d-8f05-9ed31360b3fe.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\420e04df-7e55-4194-a1c4-b74ebdb82e40.jpg",
+      "PackagePath": "staticwebassets\\Images\\Blogss\\420e04df-7e55-4194-a1c4-b74ebdb82e40.jpg"
+    },
+    {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\6e746049-31e2-420c-8f6a-f3740d2cf54d.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogss\\6e746049-31e2-420c-8f6a-f3740d2cf54d.jpg"
     },
     {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\7ccad6be-8acb-4cea-bd13-63bd54d220d1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Blogss\\7ccad6be-8acb-4cea-bd13-63bd54d220d1.jpg"
+    },
+    {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\7d484e26-b24e-4803-ae0c-77605221eccc.png",
       "PackagePath": "staticwebassets\\Images\\Blogss\\7d484e26-b24e-4803-ae0c-77605221eccc.png"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\815ee7df-f462-4df1-a717-26d8e5c6491a.jpg",
+      "PackagePath": "staticwebassets\\Images\\Blogss\\815ee7df-f462-4df1-a717-26d8e5c6491a.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\a111088c-061d-46ba-abe0-057a81d6dc4f.jpg",
+      "PackagePath": "staticwebassets\\Images\\Blogss\\a111088c-061d-46ba-abe0-057a81d6dc4f.jpg"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Blogss\\c92ab8e0-747e-48a3-ae9f-2657c20eb146.jpg",
+      "PackagePath": "staticwebassets\\Images\\Blogss\\c92ab8e0-747e-48a3-ae9f-2657c20eb146.jpg"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\Logo.png",
@@ -113,6 +181,10 @@
       "PackagePath": "staticwebassets\\Images\\banner-7.jpg"
     },
     {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\h2_img.png",
+      "PackagePath": "staticwebassets\\Images\\h2_img.png"
+    },
+    {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\imageC1.png",
       "PackagePath": "staticwebassets\\Images\\imageC1.png"
     },
@@ -143,6 +215,10 @@
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Company.js",
       "PackagePath": "staticwebassets\\js\\Company.js"
+    },
+    {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Contact.js",
+      "PackagePath": "staticwebassets\\js\\Contact.js"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Covertype.js",

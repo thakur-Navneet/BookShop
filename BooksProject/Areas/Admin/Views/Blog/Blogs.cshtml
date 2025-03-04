@@ -1,102 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Blog Page";
-    var bannerHeading = "Blogs";
+    var bannerHeading = "Our Blogs";
 }
 
 <partial name="_BannerTemplate" model="bannerHeading" />
-<div class="container mt-3">
-    <h2 class="text-center text-info">Blog's List</h2>
-    <div class="row mt-3" id="authorsCont">
-        @foreach (var bblog in Model)
-        {
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="@bblog.BlogImage" class="img-fluid" alt="@bblog.Title" />
-                    <div class="card-body">
-                        <h5 class="card-title">@bblog.Title</h5>
-                        <p class="card-text">@bblog.Description</p>
-                        @*<p class="card-text">@bblog.Description.Substring(0, 100)...</p>*@
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BBlogModal"
-                            data-title="@bblog.Title"
-                            data-description="@bblog.Description"
-                            data-image="@bblog.BlogImage">
-                            View Details
-                        </button>
-                    </div>
-                </div>
+<div class="container mt-5">
+    @foreach (var bblog in Model)
+    {
+        <div class="row mb-5">
+            <div class="col-lg-5">
+                <img src="@bblog.BlogImage" class="card-img-top" style="height: 250px; object-fit: cover;" alt="@bblog.Title" />
             </div>
-        }
-    </div>
-</div>
-
-<div class="modal fade" id="BBlogModal" tabindex="-1" aria-labelledby="BBlogModal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img id="modalImage" src="" class="img-fluid mb-3" alt="Blog Image" />
-                <p id="modalDescription"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="col-lg-7 border-bottom">
+                <h5 class="card-title">@bblog.Title</h5>
+                <p class="card-text">@bblog.Description</p>
+                <p class="card-text text-muted"><small>@bblog.CreatedAt.ToString("yyyy-MM-dd HH:mm")</small></p>
             </div>
         </div>
-    </div>
+    }
 </div>
-
-@*<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        $('#BBlogModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var title = button.data('title');
-            var description = button.data('description');
-            var image = button.data('image');
-
-            var modal = $(this);
-            modal.find('#modalTitle').text(title);
-            modal.find('#modalDescription').text(description);
-            modal.find('#modalImage').attr('src', image);
-        });
-    });
-    // Function to open the modal and populate it with the selected author's details
-    function openModal(title, description, imageUrl) {
-        // Set the content of the modal dynamically
-        document.getElementById('authorTitle').innerText = title;
-        document.getElementById('authorDescription').innerText = description;
-        document.getElementById('authorImage').src = imageUrl;
-
-        // Show the modal
-        var myModal = new bootstrap.Modal(document.getElementById('authorModal'));
-        myModal.show();
-    }
-
-    // Search functionality to filter authors
-    function searchAuthors() {
-        var input, filter, container, items, title, description, i, txtValue;
-        input = document.getElementById('searchInput');
-        filter = input.value.toUpperCase();
-        container = document.getElementById("authorsCont");
-        items = container.getElementsByClassName('author-item');
-
-        for (i = 0; i < items.length; i++) {
-            title = items[i].getElementsByClassName("card-title")[0];
-            description = items[i].getElementsByClassName("card-text")[0];
-            if (title || description) {
-                txtValue = title.textContent || title.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    items[i].style.display = "";
-                } else {
-                    items[i].style.display = "none";
-                }
-            }
-        }
-    }
-</script>
-*@

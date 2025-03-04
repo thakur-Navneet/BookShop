@@ -13,6 +13,7 @@
         IOrderHeaderRepository OrderHeader { get; }
         IOrderDetailRepository OrderDetail { get; }
         ISupportRepository Support { get; }
+        IContactRepository Contact { get; }
         void Save();
     }
 }
