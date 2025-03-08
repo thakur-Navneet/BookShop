@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "ViewShoppingCartHistory";
+    var bannerHeading = "View Shopping Cart History";
+}
+<partial name="_BannerTemplate" model="bannerHeading" />
+<div class="container mt-3">
+    <table id="tblData" class="table table-striped table-bordered table-hover">
+        <thead class="bg-info">
+            <tr>
+                <th class="text-light">User Id</th>
+                <th class="text-light">Name</th>
+                <th class="text-light">Book Name</th>
+                <th class="text-light">Quantity</th>
+                <th class="text-light">Status</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@*
+<h2>ViewShoppingCartHistory</h2>
+@foreach (var shoppingCart in Model)
+{
+    @shoppingCart.ApplicationUser.Name<br/>
+    @shoppingCart.ApplicationUser.Id<br/>
+    @shoppingCart.Product.Title
+    <div class="text-center">
+        <a class="btn btn-danger" onclick=Delete("/Customer/Cart/DeleteShoping/${id}")>
+            Discontinue
+        </a>
+    </div>
+
+}
+*@
+@section Scripts  {
+    <script src="~/js/CartHistory.js"></script>
+}

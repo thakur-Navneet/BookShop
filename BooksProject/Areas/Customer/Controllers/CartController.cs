@@ -4,7 +4,10 @@ using BooksProject.Models.ViewModels;
 using BooksProject.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Stripe;
+using Stripe.Issuing;
+using Stripe.TestHelpers.Issuing;
 using System.Security.Claims;
 
 namespace BooksProject.Areas.Customer.Controllers
@@ -176,9 +179,9 @@ namespace BooksProject.Areas.Customer.Controllers
                 }
                 else
                 {
-                    ShoppingCartVM.OrderHeader.TransactionId= charge.BalanceTransactionId;
+                    ShoppingCartVM.OrderHeader.TransactionId = charge.BalanceTransactionId;
                 }
-                if(charge.Status.ToLower()=="succeeded")
+                if (charge.Status.ToLower() == "succeeded")
                 {
                     ShoppingCartVM.OrderHeader.OrderStatus = SD.OrderStatusApproved;
                     ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusApproved;
@@ -198,5 +201,38 @@ namespace BooksProject.Areas.Customer.Controllers
             var ProductHistory = _unitOfWork.OrderHeader.GetAll();
             return View(ProductHistory);
         }
+        public IActionResult ViewShoppingCartHistory()
+        {
+            //var ShoppingCartHistory = _unitOfWork.ShoppingCart.GetAll(includeProperties: "ApplicationUser,Product");
+            return View();
+        }
+        #region APIs
+        public IActionResult GetAll()
+        {
+            /*var cartItems = _unitOfWork.ShoppingCart.GetAllItems();  // This returns the cart items with a status
+            var result = cartItems.Select(item => new
+            {
+                applicationUser = new { id = item.ApplicationUser.Id, name = item.ApplicationUser.Name },
+                product = new { title = item.Product.Title },
+                count = item.Count,
+                status = (int)item.Status  // Ensure it's returned as the numeric value (1, 2)
+            });
+
+            return Json(result);*/
+            var ShoppingCartHistory = _unitOfWork.ShoppingCart.GetAll(includeProperties: "ApplicationUser,Product");
+            return Json(new { data = ShoppingCartHistory });
+        }
+        [HttpDelete]
+        public IActionResult DeleteShoping(int id)
+        {
+            var cartInDB = _unitOfWork.ShoppingCart.Get(id);
+            if (cartInDB == null)
+                return Json(new { success = false, message = "Something went wrong !!!" });
+
+            _unitOfWork.ShoppingCart.Remove(cartInDB);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Data Delete Successfully !!!" });
+        }
+        #endregion
     }
 }

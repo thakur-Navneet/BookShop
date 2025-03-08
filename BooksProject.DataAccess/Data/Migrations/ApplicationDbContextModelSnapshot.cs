@@ -355,6 +355,9 @@ namespace BooksProject.DataAccess.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ApplicationUserId");

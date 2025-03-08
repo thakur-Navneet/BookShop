@@ -18,5 +18,6 @@ namespace BooksProject.Models
         public int Count { get; set; }
         [NotMapped]
         public double Price { get; set; }
+        public StatusShoppingCart Status { get; set; }
     }
 }

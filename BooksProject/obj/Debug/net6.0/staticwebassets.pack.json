@@ -209,6 +209,10 @@
       "PackagePath": "staticwebassets\\js\\Blog.js"
     },
     {
+      "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\CartHistory.js",
+      "PackagePath": "staticwebassets\\js\\CartHistory.js"
+    },
+    {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Category.js",
       "PackagePath": "staticwebassets\\js\\Category.js"
     },

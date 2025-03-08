@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sx+fI/2T8+3cfRkYShOaRepotg2z5iDLHQoJGBTGBXI=",
+  "Hash": "CJKvoRHKiMK2FxnCVZiiWNYEjH6E4tX5dAbYxVUeQ9s=",
   "Source": "BooksProject",
   "BasePath": "_content/BooksProject",
   "Mode": "Default",
@@ -1936,6 +1936,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Blog.js"
+    },
+    {
+      "Identity": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\CartHistory.js",
+      "SourceId": "BooksProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\",
+      "BasePath": "_content/BooksProject",
+      "RelativePath": "js/CartHistory.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CartHistory.js"
     },
     {
       "Identity": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\js\\Category.js",
