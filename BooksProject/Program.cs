@@ -41,12 +41,29 @@ builder.Services.AddSession(options =>
 });
 //************ Stripe Settings *********
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("StripeSettings"));
-
+//************* Adding API *******************
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+//***************cors************************
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyAPIs",
+      builder =>
+      {
+          //builder.WithOrigins("http://localhost:4200/")
+            builder.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+      });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
     app.UseMigrationsEndPoint();
 }
 else
@@ -57,6 +74,7 @@ else
 }
 
 app.UseHttpsRedirection();
+app.UseCors("MyAPIs");
 app.UseStaticFiles();
 
 app.UseRouting();

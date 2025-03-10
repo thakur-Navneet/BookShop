@@ -549,3 +549,7 @@ D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\runtimes\unix\lib\net6.
 D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Infotech\Final\BookShop\BooksProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

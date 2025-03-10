@@ -11,8 +11,15 @@ function loadDataTable() {
             { "data": "applicationUser.id", "width": "" },
             { "data": "applicationUser.name", "width": "" },
             { "data": "product.title", "width": "" },
+            {
+                "data": "product.price",
+                "width": "",
+                "render": function (data, type, row) {
+                    return '$' + parseFloat(data).toFixed(2);  // Format the price with a dollar sign and two decimal places
+                }
+            },
             { "data": "count", "width": "" },
-            { "data": "status", "width": "" }
+            //{ "data": "status", "width": "" }
             /*{
                 "data": "status",
                 "render": function (data, type, row) {
@@ -28,7 +35,7 @@ function loadDataTable() {
                 },
                 "width": ""
             }*/
-            
+
         ]
     })
 }
