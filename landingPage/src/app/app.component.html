@@ -1,19 +1,32 @@
-<div style="font-family: 'Poppins', serif !important;">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="home">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="shop">Our Books</a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <a class="navbar-brand" routerLink="home">
+              <img src="\Images\Logo.png" class="img-fluid my-1" width="35px"/>
+              <span style="color: #e94115; font-weight: 600;">Navi</span> Books
+          </a>   
+          <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>         
+          </div>
+          <div class="col-lg-6">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav d-flex me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="shop">Our Books</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -22,4 +35,55 @@
     <app-shop></app-shop>
 -->
   <router-outlet></router-outlet>
-</div>
+  <div class="container-fluid bg-light pt-5" style="font-family: 'Poppins', serif;">
+    <div class="container">
+        <div class="row rounded">
+            <!-- Logo & Address -->
+            <div class="col-lg-3">
+                <h3>
+                    <a class="navbar-brand d-flex align-items-center text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="/Images/Logo.png" class="img-fluid w-25 mr-2" alt="Logo" />
+                        <span style="color: #e94115; font-weight: 700;">Navi</span>&nbsp;Books
+                    </a>
+                </h3>
+                <p class="mt-3 text-muted">1418 River Drive, Suite 35 <br> Cottonhall, CA 9622</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-3">
+                <h5 class="font-weight-bold">Need Help?</h5>
+                <p class="text-danger font-weight-bold h4">+(84) - 1800 - 4635</p>
+                <p class="text-muted">Monday - Friday: 9:00 - 20:00 <br> Saturday: 11:00 - 15:00</p>
+                <p><a href="mailto:contact@example.com" class="text-light font-weight-bold"> contact&#64;example.com </a></p>
+            </div>
+
+            <!-- Explore -->
+            <div class="col-lg-2 offset-lg-1">
+                <h5 class="font-weight-bold">Explore</h5>
+                <ul class="list-unstyled mt-3">
+                    <li><a href="#" class="link-underline-light text-muted">About us</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Sitemap</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Bookmarks</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Sign in/Join</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Service -->
+            <div class="col-lg-2 offset-lg-1">
+                <h5 class="font-weight-bold">Our Service</h5>
+                <ul class="list-unstyled mt-3">
+                    <li><a href="#" class="link-underline-light text-muted">Help Center</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Returns</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Product Recalls</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Accessibility</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Contact Us</a></li>
+                    <li><a href="#" class="link-underline-light text-muted">Store Pickup</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<footer class="footer border-top bg-light py-2">
+    <div class="container">
+        &copy; 2025 - BookStore - Designed By Navneet Thakur
+    </div>
+</footer>

@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { NgOptimizedImage } from '@angular/common';
+import { AboutComponent } from './about/about.component';
+import { BannerHeadingComponent } from './banner-heading/banner-heading.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ShopComponent
+    ShopComponent,
+    AboutComponent,
+    BannerHeadingComponent
   ],
   imports: [
     BrowserModule,

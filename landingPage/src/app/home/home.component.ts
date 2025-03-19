@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  imagePath = 'assets/Images/imageC2.png';
+  title = 'BookStore';
 }
