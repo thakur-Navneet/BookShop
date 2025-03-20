@@ -1,0 +1,68 @@
+[
+  {
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
+    "Method": "CreateOrUpdateContact",
+    "RelativePath": "api/LP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contact",
+        "Type": "BooksProject.Models.Contact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BooksProject.Models.Contact",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
+    "Method": "GetAllAuthors",
+    "RelativePath": "api/LP/authors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
+    "Method": "GetAllBlogs",
+    "RelativePath": "api/LP/blogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
+    "Method": "GetAllContactDetails",
+    "RelativePath": "api/LP/contacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/LP/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

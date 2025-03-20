@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BooksProject.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BooksProject.bundle.scp.css"
+      "PackagePath": "staticwebassets\\BooksProject.vfzp6pbl8h.bundle.scp.css"
     },
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\Images\\AboutPage\\About1.png",
@@ -471,6 +471,10 @@
     {
       "Id": "D:\\Infotech\\Final\\BookShop\\BooksProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BooksProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BooksProject.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -10,3 +10,4 @@ D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Mod
 D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\refint\BooksProject.Models.dll
 D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.pdb
 D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\ref\BooksProject.Models.dll
+D:\Infotech\Final\BookShop\BooksProject.Models\obj\Debug\net6.0\BooksProject.Models.sourcelink.json

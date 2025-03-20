@@ -9,9 +9,10 @@ D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.AssemblyInfoInputs.cache
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.AssemblyInfo.cs
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.csproj.CoreCompileInputs.cache
-D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.csproj.CopyComplete
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.dll
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\refint\BooksProject.DataAccess.dll
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.pdb
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.genruntimeconfig.cache
 D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\ref\BooksProject.DataAccess.dll
+D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksProject.DataAccess.sourcelink.json
+D:\Infotech\Final\BookShop\BooksProject.DataAccess\obj\Debug\net6.0\BooksPro.68B57977.Up2Date

@@ -8,6 +8,8 @@ import { ShopComponent } from './shop/shop.component';
 import { NgOptimizedImage } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { BannerHeadingComponent } from './banner-heading/banner-heading.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,13 @@ import { BannerHeadingComponent } from './banner-heading/banner-heading.componen
     HomeComponent,
     ShopComponent,
     AboutComponent,
-    BannerHeadingComponent
+    BannerHeadingComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
