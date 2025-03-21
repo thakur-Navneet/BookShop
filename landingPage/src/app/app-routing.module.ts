@@ -5,6 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 import { AboutComponent } from './about/about.component';
 import { BannerHeadingComponent } from './banner-heading/banner-heading.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { AuthorComponent } from './author/author.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"home", pathMatch:"full"},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: "about", component: AboutComponent},
   {path: "shop", component: ShopComponent},
   {path: "blogs", component: BlogsComponent},
+  {path: "author", component: AuthorComponent},
   {path: "bannerHeading", component: BannerHeadingComponent}
 ];
 

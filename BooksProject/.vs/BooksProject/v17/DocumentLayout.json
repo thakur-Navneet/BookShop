@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "D:\\Infotech\\Final\\BookShop\\BooksProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|d:\\infotech\\final\\bookshop\\booksproject\\areas\\landingpage\\controllers\\lpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|solutionrelative:areas\\landingpage\\controllers\\lpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FD20B95-2F71-448C-B670-4F5A2E8BD8F7}|..\\BooksProject.Models\\BooksProject.Models.csproj|d:\\infotech\\final\\bookshop\\booksproject.models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|d:\\infotech\\final\\bookshop\\booksproject\\areas\\customer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|solutionrelative:areas\\customer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FD20B95-2F71-448C-B670-4F5A2E8BD8F7}|..\\BooksProject.Models\\BooksProject.Models.csproj|d:\\infotech\\final\\bookshop\\booksproject.models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|d:\\infotech\\final\\bookshop\\booksproject\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|solutionrelative:areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|d:\\infotech\\final\\bookshop\\booksproject\\areas\\landingpage\\controllers\\lpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|solutionrelative:areas\\landingpage\\controllers\\lpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D9AE20E-2C21-4996-B40F-29142E35B5C4}|BooksProject.csproj|d:\\infotech\\final\\bookshop\\booksproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,37 +33,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\Infotech\\Final\\BookShop\\BooksProject.Models\\Blog.cs",
-              "RelativeDocumentMoniker": "..\\BooksProject.Models\\Blog.cs",
-              "ToolTip": "D:\\Infotech\\Final\\BookShop\\BooksProject.Models\\Blog.cs",
-              "RelativeToolTip": "..\\BooksProject.Models\\Blog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Title": "Author.cs",
+              "DocumentMoniker": "D:\\Infotech\\Final\\BookShop\\BooksProject.Models\\Author.cs",
+              "RelativeDocumentMoniker": "..\\BooksProject.Models\\Author.cs",
+              "ToolTip": "D:\\Infotech\\Final\\BookShop\\BooksProject.Models\\Author.cs",
+              "RelativeToolTip": "..\\BooksProject.Models\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:57:47.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\Customer\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\Customer\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Customer\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T10:21:50.51Z",
+              "WhenOpened": "2025-03-21T16:19:38.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\Customer\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\Customer\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Customer\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T10:21:50.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\Customer\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Areas\\Customer\\Controllers\\HomeController.cs",
@@ -99,15 +98,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LPController.cs",
               "DocumentMoniker": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\LandingPage\\Controllers\\LPController.cs",
               "RelativeDocumentMoniker": "Areas\\LandingPage\\Controllers\\LPController.cs",
               "ToolTip": "D:\\Infotech\\Final\\BookShop\\BooksProject\\Areas\\LandingPage\\Controllers\\LPController.cs",
               "RelativeToolTip": "Areas\\LandingPage\\Controllers\\LPController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwAIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T16:41:41.865Z"
+              "WhenOpened": "2025-03-10T16:41:41.865Z",
+              "EditorCaption": ""
             }
           ]
         }

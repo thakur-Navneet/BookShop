@@ -1,0 +1,33 @@
+<app-banner-heading [pageTitle]="'Our Authors'"></app-banner-heading>
+
+<div class="container-fluid my-5">
+    <div class="container my-5">      
+        <div class="row">
+          <div *ngFor="let author of authorList" class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card author-card" (click)="openModal(author)">
+              <img [src]="apiUrl + author.authorImage" alt="{{ author.title }}" class="card-img-top author-image">
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ author.title }}</h5>
+                <p class="card-text">{{ author.description | slice:0:99 }}...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade show d-block" *ngIf="selectedAuthor" (click)="closeModal($event)">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" (click)="$event.stopPropagation()">
+            <div class="modal-header position-relative">
+              <h5 class="modal-title">{{ selectedAuthor.title }}</h5>
+              <button type="button" class="close px-2" (click)="selectedAuthor = null">&times;</button>
+            </div>
+            <div class="modal-body text-center py-4 px-2">
+              <img [src]="apiUrl + selectedAuthor.authorImage" alt="{{ selectedAuthor.title }}" class="modal-image">
+              <p class="mt-3">{{ selectedAuthor.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
