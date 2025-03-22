@@ -1,8 +1,18 @@
 [
   {
-    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.ContactController",
+    "Method": "GetAllContactDetails",
+    "RelativePath": "api/Contact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.ContactController",
     "Method": "CreateOrUpdateContact",
-    "RelativePath": "api/LP",
+    "RelativePath": "api/Contact",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -39,16 +49,6 @@
     "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
     "Method": "GetAllBlogs",
     "RelativePath": "api/LP/blogs",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BooksProject.Areas.LandingPage.Controllers.LPController",
-    "Method": "GetAllContactDetails",
-    "RelativePath": "api/LP/contacts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

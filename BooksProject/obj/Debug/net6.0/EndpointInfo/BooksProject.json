@@ -5,58 +5,20 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/LP/authors": {
+    "/api/Contact": {
       "get": {
         "tags": [
-          "LP"
+          "Contact"
         ],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/LP/products": {
-      "get": {
-        "tags": [
-          "LP"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/LP/blogs": {
-      "get": {
-        "tags": [
-          "LP"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/LP/contacts": {
-      "get": {
-        "tags": [
-          "LP"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/LP": {
+      },
       "post": {
         "tags": [
-          "LP"
+          "Contact"
         ],
         "requestBody": {
           "content": {
@@ -97,6 +59,42 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/LP/authors": {
+      "get": {
+        "tags": [
+          "LP"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LP/products": {
+      "get": {
+        "tags": [
+          "LP"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LP/blogs": {
+      "get": {
+        "tags": [
+          "LP"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

@@ -11,6 +11,8 @@ import { BannerHeadingComponent } from './banner-heading/banner-heading.componen
 import { BlogsComponent } from './blogs/blogs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthorComponent } from './author/author.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { AuthorComponent } from './author/author.component';
     BannerHeadingComponent,
     BlogsComponent,
     AuthorComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
