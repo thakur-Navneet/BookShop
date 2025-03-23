@@ -1,45 +1,99 @@
 <app-banner-heading [pageTitle]="'Contact Us'"></app-banner-heading>
 
+<!-- Contact Section -->
 <div class="container-fluid my-5">
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card shadow p-4">
-              <h2 class="text-center">Send us our queries</h2>
-              <p class="text-center text-secondary">We shall contact you shorlty!</p>
+  <div class="container">
+    <div class="row g-5">
       
-              <form>
-                <!-- Name -->
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-      
-                <!-- Email -->
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-      
-                <!-- Subject -->
-                <div class="mb-3">
-                  <label for="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
-                </div>
-      
-                <!-- Message -->
-                <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-                </div>
-      
-                <!-- Submit Button -->
-                <div class="d-grid">
-                  <button type="submit" (click)="SaveClick()" class="btn btn-primary">Send Message</button>
-                </div>
-              </form>
+      <!-- Contact Form -->
+      <div class="col-lg-6">
+        <div class="card shadow border-0 p-4">
+          <h2 class="mb-4 text-center">Let's Connect</h2>
+  
+          <form>
+            <!-- Name -->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="ContactDetail.name" name="name" required>
+              <label for="name">Name</label>
+            </div>
+  
+            <!-- Email -->
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="ContactDetail.email" name="email" required>
+              <label for="email">Email</label>
+            </div>
+  
+            <!-- Subject -->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="subject" placeholder="Subject" [(ngModel)]="ContactDetail.subject" name="subject" required>
+              <label for="subject">Subject</label>
+            </div>
+  
+            <!-- Message -->
+            <div class="form-floating mb-4">
+              <textarea class="form-control" placeholder="Message" id="message" style="height: 150px" [(ngModel)]="ContactDetail.message" name="message" required></textarea>
+              <label for="message">Message</label>
+            </div>
+  
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" (click)="SaveClick()">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="col-lg-6">
+        <!-- Office Info Interactive Card -->
+          <div class="card shadow border-0 p-4 mt-2 office-card interactive-card">
+            <div class="card-body">
+
+              <h4 class="card-title mb-4">Our Store</h4>
+
+              <p class="card-text mb-4">
+                <i class="fa fa-map-marker me-2 text-primary"></i>
+                1240, Suite Dr,Huntington Beach, CA 92649
+              </p>
+
+              <h5 class="mb-3">Need Help?</h5>
+              <p class="fw-semibold mb-3">
+                <a href="tel:+19668696686" class="text-decoration-none text-dark hover-effect">
+                  <i class="fa fa-phone me-2 text-success"></i> +1 96686 96686
+                </a>
+              </p>
+
+              <p class="fw-semibold mb-4">
+                <a href="mailto:thakurnavneet686@gmail.com" class="text-decoration-none text-dark hover-effect">
+                  <i class="fa fa-envelope-o me-2 text-danger"></i> 
+                  support&#64;example.com
+                </a>
+              </p>
+
+              <h5 class="mb-3">Bookstore Timing</h5>
+              <p class="fw-semibold text-dark mb-4">
+                <i class="fa fa-clock-o me-2 text-warning"></i> Mon - Fri: 9:00 - 20:00 <br>
+                <i class="fa fa-clock-o me-2 text-warning"></i> Saturday: 13:00 - 20:00 <br>
+                <i class="fa fa-clock-o me-2 text-warning"></i> Sunday: Closed
+              </p>
+
+              <h5 class="mb-3">Connect with Us</h5>
+              <div class="social-icons d-flex gap-4 mt-3 justify-content-center">
+                <a href="#" class="social-icon text-primary"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="social-icon text-danger"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="social-icon text-info"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="social-icon text-dark"><i class="fa fa-linkedin"></i></a>
+              </div>
+
             </div>
           </div>
-        </div>
-      </div> 
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid mt-2">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4926.032868325511!2d-118.05244540561768!3d33.72811096650527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd25967192feeb%3A0xe028c8e4c61f8110!2sSuite%20Dr%2C%20Huntington%20Beach%2C%20CA%2092649%2C%20USA!5e0!3m2!1sen!2sin!4v1742719838077!5m2!1sen!2sin" style="width: 100%; height: 560px; border :0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>

@@ -1,0 +1,27 @@
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    height: 400px;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-img {
+    border-radius: 12px 0 0 12px;
+    max-height: 400px;
+    height: 400px;
+  }
+  
+  .carousel-container {
+    overflow: hidden;
+    border-radius: 12px 0 0 12px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  

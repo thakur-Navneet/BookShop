@@ -5,12 +5,44 @@
   .form-control {
     border-radius: 5px;
   }
-  
-  .btn {
-    font-size: 1rem;
-    padding: 10px;
+  .contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+  }
+  .interactive-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
   
-  .invalid-feedback {
-    font-size: 0.9rem;
-  }  
+  .interactive-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hover-effect:hover {
+    color: #0d6efd !important;
+    text-decoration: underline;
+  }
+  
+  .social-icon {
+    font-size: 1.8rem;
+    transition: transform 0.4s, color 0.4s;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.3);
+    color: #0d6efd !important;
+  }
+  
+  .fa {
+    transition: transform 0.3s ease;
+  }
+  
+  .fa:hover {
+    transform: rotate(8deg) scale(1.2);
+  }
+  

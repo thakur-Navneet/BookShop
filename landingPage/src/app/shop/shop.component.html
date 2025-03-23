@@ -1,2 +1,52 @@
 <app-banner-heading [pageTitle]="'Our Books'"></app-banner-heading>
-<p>shop works!</p>
+
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Our Book Collection</h2>
+
+  <div class="row g-4">
+    <div class="col-lg-6" *ngFor="let product of productList; let i = index">
+      <div class="card product-card shadow-lg border-0">
+
+        <!-- Image Carousel Left Side -->
+        <div class="row g-0">
+          <div class="col-md-5 carousel-container">
+            <div id="carousel{{ i }}" class="carousel slide h-100" data-bs-ride="carousel">
+              <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                  <img [src]="apiUrl + product.imageFeatured" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                </div>
+                <div class="carousel-item h-100" *ngIf="product.imageFirst">
+                  <img [src]="apiUrl + product.imageFirst" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                </div>
+                <div class="carousel-item h-100" *ngIf="product.imageSecond">
+                  <img [src]="apiUrl + product.imageSecond" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-slide="prev">
+              </button>
+              <button class="carousel-control-next" type="button"  data-bs-slide="next">
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Details Right Side -->
+          <div class="col-md-7 p-4 d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title mb-3">{{ product.title }}</h5>
+              <p class="card-text"><strong>Author:</strong> {{ product.author?.title || 'N/A' }}</p>
+              <p class="card-text"><strong>Category:</strong> {{ product.category?.name || 'N/A' }}</p>
+              <p class="card-text"><strong>Cover:</strong> {{ product.coverType?.name || 'N/A' }}</p>
+              <p class="card-text"><strong>ISBN:</strong> {{ product.isbn }}</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="text-success fw-bold fs-5">{{ product.price | currency:'USD' }}</span>
+              <a href="https://localhost:7110/Customer/Shop" target="_blank" class="btn btn-outline-primary btn-sm">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

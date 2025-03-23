@@ -12,20 +12,40 @@ import { errorContext } from 'rxjs/internal/util/errorContext';
 })
 export class ContactComponent {
   contactList : Contact [] = [];
-  newContactDetail : Contact = new Contact();
+  ContactDetail : Contact = new Contact();
   constructor(private contactService : ContactService) {}
+  getall()
+  {
+    this.contactService.getAllContactDetails().subscribe(
+      (response)=>{
+        this.contactList = response;
+        console.log(response);
+      },
+      (error)=>{
+        console.log("Unable to fetch contact data!!!");
+      }
+    );
+  }
   SaveClick()
   {
-    alert(this.newContactDetail.email);
-    /*this.contactService.saveContactDetails(this.newContactDetail).subscribe(
+    //alert(this.ContactDetail.message);
+    this.contactService.saveContactDetails(this.ContactDetail).subscribe(
       (response)=>{
-
+        alert('data saved');
+        this.getall();
+        this.resetForm();
       },
       (error) => {
         console.log("Unable to send the data to api");
       }
-    );*/
+    );
   }
-  // getall()  {}
-  // ngOnInit()  {    this.getall();  }
+  resetForm()
+  {
+        this.ContactDetail.name = "";
+        this.ContactDetail.email = "";
+        this.ContactDetail.subject = "";
+        this.ContactDetail.message = "";
+  }
+  ngOnInit()  {    this.getall();  }
 }
