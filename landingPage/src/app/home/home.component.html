@@ -1,4 +1,4 @@
-<div class="container-fluid py-5" style="background-color: #f2ede3;">
+<div class="container-fluid py-5" style="background-color: #f2ede3; margin-top: 60px;">
   <div id="topslider1" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item">
@@ -71,6 +71,82 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
           </div>
+      </div>
+  </div>
+</div>
+<div class="container-fluid py-5" style="background-color: #f2ede3;">
+  <div class="container text-center">
+      <h2 class="section-title">Our Featured Products</h2>
+      <p class="mb-5">Explore our exclusive collection of products. Get them while they last!</p>
+      <div class="row g-4">
+        <div class="col-lg-6" *ngFor="let product of productList | slice:2:4; let i = index">
+          <div class="card product-card shadow-lg border-0">
+    
+            <!-- Image Carousel Left Side -->
+            <div class="row g-0">
+              <div class="col-md-6 carousel-container">
+                
+                <a routerLink="/shop" class="">
+                  <img [src]="apiUrl + product.imageFeatured" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                </a>
+                <!-- <div id="carousel{{ i }}" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                      <img [src]="apiUrl + product.imageFeatured" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                    </div>
+                    <div class="carousel-item h-100" *ngIf="product.imageFirst">
+                      <img [src]="apiUrl + product.imageFirst" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                    </div>
+                    <div class="carousel-item h-100" *ngIf="product.imageSecond">
+                      <img [src]="apiUrl + product.imageSecond" class="d-block w-100 h-100 product-img" alt="{{ product.title }}">
+                    </div>
+                  </div>
+    
+                  <button class="carousel-control-prev" type="button" data-bs-slide="prev">
+                  </button>
+                  <button class="carousel-control-next" type="button"  data-bs-slide="next">
+                  </button>
+                </div> -->
+              </div>
+    
+              <!-- Product Details Right Side -->
+              <div class="col-md-6 p-4 d-flex flex-column justify-content-center">
+                <div>
+                  <h3 class="mb-3 position-relative"><strong>{{ product.title }}</strong></h3>
+                  <p class="card-text">By<strong> {{ product.author?.title || 'N/A' }}  </strong></p>
+                  <p class="category-label">{{ product.category?.name || 'N/A' }}</p>
+                  <!-- <p class="card-text">{{ product.description }}</p> -->
+                  <p class="card-text"><strong>ISBN:</strong> {{ product.isbn }}</p>
+                  <p><strong>Price: </strong>
+                    <span class="text-danger ms-1" style="text-decoration: line-through;">{{ product.price | currency:'USD' }}</span>
+                    <span class="text-success fw-bold fs-5 ms-2">{{ product.price50 | currency:'USD' }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+  </div>
+</div>  
+<div class="container-fluid py-5">
+  <div class="container">
+      <h2 class="text-center section-title">Our Featured Blogs</h2>
+      <p class="text-center mb-5">Latest articles and insights</p>
+      <div class="row">
+        <div class="col-lg-4" *ngFor="let blog of blogList | slice:2:5">             
+          <div class="card my-2 py-3 px-2 blogCard">
+              <img [src]="apiUrl + blog.blogImage"  alt="{{ blog.title }}" class="blog-image img-fluid">
+              <!-- <img [src]="getImageUrl(blog.blogImage)"  alt="{{ blog.title }}" class="blog-image img-fluid"> -->
+            <small>Created At: {{ blog.CreatedAt | date:'medium' }}</small>
+            <div class="blog-content">
+              <h2>{{ blog.title }}</h2>
+              <p>{{ blog.description | slice:0:99 }} ...</p>
+            </div>
+          </div>
+        </div> 
+        <a routerLink="/blogs" class="btn btn-lg mx-auto d-block mt-4 w-25 btn-outline-dark pro_but">View More Blogs</a> 
       </div>
   </div>
 </div>
