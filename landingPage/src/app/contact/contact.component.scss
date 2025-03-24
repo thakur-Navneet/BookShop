@@ -45,4 +45,16 @@
   .fa:hover {
     transform: rotate(8deg) scale(1.2);
   }
+
   
+
+/* Button Styling */
+.pro_but {
+  border-color: #e94115;
+  color: #e94115;
+}
+/* Hover Effect */
+.pro_but:hover {
+  color: #fff;
+  background-color: #e94115 !important;
+}

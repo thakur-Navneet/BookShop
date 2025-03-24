@@ -1,8 +1,21 @@
-# BookShop
-Welcome to our online BookShop! Explore a wide range of books, including bestsellers, classic literature, and new releases across all genres. Our eCommerce platform ensures an easy shopping experience with secure payments, a personalized dashboard for employees, and much more!
+
+
+# Book Shop
+Welcome to our online Book Shop! Explore a wide range of books, including bestsellers, classic literature, and new releases across all genres. Our eCommerce platform ensures an easy shopping experience with secure payments, a personalized dashboard for employees, and much more!
 
 ## Features
 
+### For Angular Frontend:
+
+-   **Dynamic Product Fetching via API**:  
+    The Angular application will dynamically fetch product data (including author, category, and cover type) through RESTful API calls, ensuring up-to-date information is always displayed to the user.
+    
+-   **Author Blogs Section**:  
+    Customers can read author blogs fetched from the backend via APIs. The section will display recent articles, author interviews, and writing tips to engage the audience.
+    
+-   **User Query Submission**:  
+    Customers can submit their queries, feedback, or issues directly through the Angular app. These queries are posted to the backend API and stored for review.
+    
 ### For Customers:
 
 - **Product Catalog**: Customers can browse a wide variety of books and related products across multiple categories. Products can be filtered by attributes such as author, genre, price, and cover type.
@@ -25,53 +38,79 @@ Welcome to our online BookShop! Explore a wide range of books, including bestsel
 - **Secure Payment Processing**: Integrated with a payment gateway to handle secure transactions. Admins can view transaction details, manage payments, and issue refunds if needed.
 - **Order Processing**: After a successful payment, admins can view the order status and process it accordingly (e.g., shipping, completed, or refunded).
 
-## Technologies Used
+## Technologies Used  
 
-- **ASP.NET Core MVC**: The MVC architecture is used to separate the application’s business logic, user interface, and data management layers.
-- **Entity Framework Core**: ORM used to handle data management and relationships between products, authors, categories, and cover types.
-- **SQL Server**: Used for storing and managing application data such as users, orders, products, and more.
-- **Bootstrap**: Utilized for creating a responsive, mobile-first design with a clean and modern user interface.
-- **Payment Gateway Integration**: Integration with a third-party payment processor (Stripe) to handle secure transactions.
-- **ASP.NET Identity**: Used for authentication and managing user roles (customers, admins, employees).
+- **ASP.NET Core MVC**: The MVC architecture is used to separate the application’s business logic, user interface, and data management layers.  
+- **ASP.NET Core Web API**: Provides RESTful endpoints for handling data operations, enabling smooth integration with frontend applications.  
+- **Angular**: Used for building a dynamic and interactive user interface, consuming the API for GET and POST requests.  
+- **Entity Framework Core**: ORM used to handle data management and relationships between products, authors, categories, and cover types.  
+- **SQL Server**: Used for storing and managing application data such as users, orders, products, and more.  
+- **Bootstrap**: Utilized for creating a responsive, mobile-first design with a clean and modern user interface.  
+- **Payment Gateway Integration**: Integration with a third-party payment processor (Stripe) to handle secure transactions.  
+- **ASP.NET Identity**: Used for authentication and managing user roles (customers, admins, employees).  
 - **Admin Dashboard**: Built with ASP.NET Core MVC for a robust and user-friendly interface for managing products, users, and content.
 
-## Installation
+## Installation  
 
-To run this project locally, follow the steps below:
+To run this project locally, follow the steps below:  
 
-1. **Clone the repository**:
+### **Backend (ASP.NET Core MVC & API)**  
+
+1. **Clone the repository**:  
 
     ```bash
     git clone https://github.com/thakur-Navneet/bookshop.git
-    ```
+    ```  
 
-2. **Navigate to the project folder**:
+2. **Navigate to the project folder**:  
 
     ```bash
     cd bookshop
-    ```
+    ```  
 
-3. **Restore NuGet packages**:
+3. **Restore NuGet packages**:  
 
     ```bash
     dotnet restore
-    ```
+    ```  
 
-4. **Update the database**:
+4. **Update the database**:  
 
-    Run the following command to apply migrations:
+    Run the following command to apply migrations:  
 
     ```bash
     dotnet ef database update
-    ```
+    ```  
 
-5. **Run the application**:
+5. **Run the application**:  
 
     ```bash
     dotnet run
-    ```
+    ```  
 
-    The application will be available at `https://localhost:7001`.
+    The application will be available at `https://localhost:7001`.  
+
+### **Frontend (Angular)**  
+
+1. **Navigate to the Angular project folder** (inside the `bookshop` folder or wherever the Angular project is located):  
+
+    ```bash
+    cd bookshop-angular
+    ```  
+
+2. **Install dependencies**:  
+
+    ```bash
+    npm install
+    ```  
+
+3. **Run the Angular application**:  
+
+    ```bash
+    ng serve
+    ```  
+
+    The Angular app will be available at `http://localhost:4200`.  
 
 ### Payment Gateway Configuration
 
@@ -85,6 +124,4 @@ To configure the payment gateway:
 
 If you have any questions or suggestions, feel free to reach out at [thakurnavneet686@gmail.com](mailto:thakurnavneet686@gmail.com).
 
----
-
-We hope you enjoy shopping at BookShop and find your next great read today!
+We hope you enjoy shopping at Book Shop and find your next great read today!
